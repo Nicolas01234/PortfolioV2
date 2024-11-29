@@ -18,31 +18,21 @@
 
 /* Typing animation styles */
 .typing-animation {
-    font-size: clamp(1rem, 4vw, 3rem); /* Adjust between 1.5rem and 3rem based on screen width */
+    font-size: clamp(1rem, 4vw, 3rem); /* Adjust between 1rem and 3rem based on screen width */
     display: inline-block;
     border-right: 2px solid;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+    animation: blink 0.75s step-end infinite; /* Only keep the blinking effect here */
 }
 
-
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
+/* No animation for typing width */
 @keyframes blink {
     50% {
         border-color: transparent;
     }
 }
+
 
 .cta-button {
     display: block;
@@ -60,29 +50,4 @@
 .cta-button:hover {
     background: #333;
     color: #fff;
-}
-
-/* Keyframes for Hero Text Animation */
-@keyframes fadeInDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }

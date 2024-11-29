@@ -11,21 +11,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Typing effect for the hero title
-const titleElement = document.getElementById("hero-title");
-const titleText = titleElement.textContent;
-titleElement.textContent = "";
-let index = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  // Typing effect for the hero title
+  const titleElement = document.getElementById("hero-title");
+  const titleText = titleElement.textContent;
+  titleElement.textContent = ""; // Clear initial text
+  let index = 0;
 
-function type() {
-  if (index < titleText.length) {
-    titleElement.textContent += titleText.charAt(index);
-    index++;
-    setTimeout(type, 100); // Adjust typing speed here
+  // Set the border-right to blink after typing ends
+  function type() {
+    if (index < titleText.length) {
+      titleElement.textContent += titleText.charAt(index);
+      index++;
+      setTimeout(type, 100); // Adjust typing speed here
+    } else {
+      // Stop blinking when text is fully typed
+      titleElement.style.borderRight = "2px solid";
+    }
   }
-}
 
-type();
+  type();
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // Select all links with hashes

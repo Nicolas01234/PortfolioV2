@@ -1,0 +1,393 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links.nav-active {
+    display: flex; /* Show on active */
+    opacity: 1;
+}
+
+.burger.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* For smooth animation */
+.burger span {
+    display: block;
+    background: #fff;
+    height: 3px;
+    margin: 4px;
+    width: 25px;
+    transition: all 0.3s ease;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Burger Menu for Mobile */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Existing styles remain the same */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Keep hidden by default */
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px; /* Adjust based on your navbar height */
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.nav-active {
+        display: flex; /* Display flex when active */
+    }
+
+    .burger {
+        display: flex; /* Always show the burger button */
+        z-index: 11; /* Ensure the burger is above the nav links */
+    }
+}
+
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem; /* Reduced padding for smaller screens */
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 1.5rem;
+    }
+}
+
+
+
+/* Typing animation styles */
+.typing-animation {
+    font-size: clamp(1rem, 4vw, 3rem); /* Adjust between 1.5rem and 3rem based on screen width */
+    display: inline-block;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.cta-button {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    background: #fff;
+    color: #333;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Keyframes for Hero Text Animation */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 0;
+    background-color: #f7f7f7;
+}
+
+.about,
+.skills,
+.projects,
+.contact {
+    background: #ffffff;
+    padding: 4rem 0;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #5b86e5;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+p,
+ul {
+    text-align: center;
+    color: #666;
+}
+
+/* Skills */
+.skills ul {
+    display: grid;
+    gap: 1rem; /* Adjust the spacing as needed */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Flexible columns */
+    justify-content: center;
+}
+
+
+.skills li {
+    background: #5b86e5;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.skills li:hover {
+    transform: scale(1.1);
+}
+
+/* 
+@media (max-width: 1268px) {
+    .skills ul {
+        flex-direction: column; 
+        align-items: center;  
+    }
+}
+ */
+
+/* Projects */
+.project-grid {
+    display: grid;
+    gap: 2rem; /* Space between items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    justify-content: center; /* Center the grid */
+    align-items: start; /* Align items at the start */
+}
+
+/* Media Query for Very Small Screens (Optional) */
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+
+.project-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.project-item p {
+    color: #666;
+}
+
+ /* Remove underline and default link styling */
+.project-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #5b86e5;
+    outline: none;
+}
+
+.contact button {
+    background: #5b86e5;
+    color: #fff;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background: #333;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+
+

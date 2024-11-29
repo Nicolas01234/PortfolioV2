@@ -38,3 +38,12 @@
 .contact button:hover {
     background: #333;
 }
+
+#formStatus {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #5b86e5; /* Success color */
+}
+#formStatus.error {
+    color: red;
+}

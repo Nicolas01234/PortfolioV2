@@ -5,16 +5,18 @@
     gap: 1rem; /* Adjust the spacing as needed */
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Flexible columns */
     justify-content: center;
+    list-style: none; /* This will remove the bullet points */
 }
 
 
 .skills li {
-    background: #5b86e5;
-    color: #fff;
+    background: #7e7a7a;
+    color: #ffffff;
     padding: 0.7rem 1.2rem;
     border-radius: 5px;
     font-weight: bold;
     transition: transform 0.3s ease;
+
 }
 
 .skills li:hover {

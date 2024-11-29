@@ -11,7 +11,7 @@
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: clamp(1rem, 4vw, 3rem);
     text-transform: uppercase;
     letter-spacing: 2px;
 }

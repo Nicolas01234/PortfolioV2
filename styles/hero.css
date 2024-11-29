@@ -4,9 +4,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem 1rem; /* Reduced padding for smaller screens */
+    padding: 2rem 1rem; /* Adjusted for smaller screens */
     min-height: 100vh;
 }
+
 
 @media (max-width: 768px) {
     .hero {

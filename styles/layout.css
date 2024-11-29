@@ -9,7 +9,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-    background-color: #f7f7f7;
+    background: url('../images/green-trees-near-lake-cloudy-sky-daytime.jpg') no-repeat center center fixed;
+    background-size: cover;
     line-height: 1.6;
 }
 

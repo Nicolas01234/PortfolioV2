@@ -17,7 +17,7 @@
 
 
 .project-item {
-    background: #fff;
+    background: #7e7a7a;
     padding: 1.5rem;
     border-radius: 10px;
     width: 100%;
@@ -33,12 +33,12 @@
 
 .project-item h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
 .project-item p {
-    color: #666;
+    color: #ffffff;
 }
 
  /* Remove underline and default link styling */

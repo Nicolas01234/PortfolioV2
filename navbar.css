@@ -1,0 +1,109 @@
+/* Navbar */
+.navbar {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links.nav-active {
+    display: flex; /* Show on active */
+    opacity: 1;
+}
+
+.burger.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* For smooth animation */
+.burger span {
+    display: block;
+    background: #fff;
+    height: 3px;
+    margin: 4px;
+    width: 25px;
+    transition: all 0.3s ease;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Burger Menu for Mobile */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Existing styles remain the same */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Keep hidden by default */
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px; /* Adjust based on your navbar height */
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.nav-active {
+        display: flex; /* Display flex when active */
+    }
+
+    .burger {
+        display: flex; /* Always show the burger button */
+        z-index: 11; /* Ensure the burger is above the nav links */
+    }
+}

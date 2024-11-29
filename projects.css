@@ -1,0 +1,48 @@
+
+/* Projects */
+.project-grid {
+    display: grid;
+    gap: 2rem; /* Space between items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    justify-content: center; /* Center the grid */
+    align-items: start; /* Align items at the start */
+}
+
+/* Media Query for Very Small Screens (Optional) */
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+
+.project-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.project-item p {
+    color: #666;
+}
+
+ /* Remove underline and default link styling */
+.project-link {
+    text-decoration: none; 
+    color: inherit; 
+}

@@ -53,6 +53,7 @@
 .nav-links li {
     margin-left: 1rem;
     padding-bottom: 1rem;
+    border-bottom: 2px solid #fff;
 }
 
 .nav-links a {
@@ -100,6 +101,12 @@
 
     .nav-links.nav-active {
         display: flex; /* Display flex when active */
+    }
+
+    .nav-links.nav-active li {
+        border-bottom: 2px solid #fff;
+        width: fit-content;
+        margin: 0 auto;
     }
 
     .burger {

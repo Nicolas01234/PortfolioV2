@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 document.addEventListener("DOMContentLoaded", () => {
-    emailjs.init("f-c4AzSR5G_wCpArZ"); // Replace with your EmailJS public key
+    emailjs.init("klVnMQ9r2zwhN2ula"); // Replace with your EmailJS public key
 
     const form = document.getElementById("contactForm");
     const statusMessage = document.getElementById("formStatus");
